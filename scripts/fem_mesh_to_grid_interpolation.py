@@ -20,9 +20,9 @@ else:
     sys.exit("Usage: python {} v_mesh_input v_grid_output".format(sys.argv[0]))
 
 # load raw data from .pos file
-print "Reading in the data..."
+print("Reading in the data...")
 x1, y1, z1, x2, y2, z2, x3, y3, z3, v1, v2, v3 = np.loadtxt(v_mesh_in, unpack=True)
-print "done"
+print("done")
 
 x = np.append(x1,(x2,x3))
 y = np.append(y1,(y2,y3))
@@ -40,7 +40,7 @@ zs = np.linspace(z_min, z_max, n_z)
 r_grid, z_grid = np.meshgrid(rs, zs)
 
 # mask x and y values
-print "Masking"
+print("Masking")
 mask1 = np.ma.masked_greater(x, r_cut_max)
 mask2 = np.ma.masked_greater(y, z_cut_max)
 mask3 = np.ma.masked_less(y, z_cut_min)
@@ -57,7 +57,7 @@ v0 = np.ma.masked_array(data=v,mask=mask_combination)
 v = np.ma.compressed(v0)
 
 # interpolate
-print "Interpolating"
+print("Interpolating")
 v_grid = griddata((r, z), v, (r_grid, z_grid), method='linear', fill_value=1.0)
 
 r_flat = r_grid.T.ravel()
