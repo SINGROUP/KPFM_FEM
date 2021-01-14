@@ -1,0 +1,9 @@
+*~
+*.x
+*.o
+*.so
+*.pyc
+*.pyd
+*_backup
+*.bak
+

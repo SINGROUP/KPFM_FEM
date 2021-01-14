@@ -21,7 +21,7 @@ try:
    db_con = open_db(db_name)
 
    for i in range(n_results):
-      print "Collecting results of job_{}".format(i)
+      print(("Collecting results of job_{}".format(i)))
       os.chdir("job_{}".format(i))
       geometry_param = read_geometry_param()
       s = geometry_param[0]
@@ -32,8 +32,8 @@ try:
       write_C_to_db(R_tip, t_sample, eps_sample, s, C_filename, db_con)
       os.chdir('..')
 
-except sqlite3.Error, e:
-   print "Error {}:".format(e.args[0])
+except sqlite3.Error as e:
+   print(("Error {}:".format(e.args[0])))
    sys.exit(1)
 finally:
    close_db(db_con)

@@ -23,8 +23,8 @@ try:
       s_list.append(row[0])
       C_list.append(row[1])
    
-except sqlite3.Error, e:
-   print "Error {}:".format(e.args[0])
+except sqlite3.Error as e:
+   print(("Error {}:".format(e.args[0])))
    sys.exit(1)
 finally:
    if con:
