@@ -100,7 +100,7 @@ else:
          write_C_to_db(R_tip, t_sample, eps_sample, s, C_filename, db_con)
 
    except sqlite3.Error as e:
-      print("Error {}:".format(e.args[0]))
+      print(("Error {}:".format(e.args[0])))
       sys.exit(1)
    finally:
       close_db(db_con)

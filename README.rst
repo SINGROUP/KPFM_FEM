@@ -9,7 +9,7 @@ This Python package is intended to help running finite element method (FEM) calc
 Requirements
 ------------
 
-- Python 2.7
+- Python 3.x (originally python 2.7)
 - GMSH (`http://gmsh.info/ <http://gmsh.info/>`_)
 - GetDP (`http://getdp.info/ <http://getdp.info/>`_)
 

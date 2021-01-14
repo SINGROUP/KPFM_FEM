@@ -24,7 +24,7 @@ try:
       C_list.append(row[1])
    
 except sqlite3.Error as e:
-   print("Error {}:".format(e.args[0]))
+   print(("Error {}:".format(e.args[0])))
    sys.exit(1)
 finally:
    if con:
