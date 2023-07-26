@@ -25,6 +25,19 @@ The ``probe-sample_model`` folder contains the basic definition for the axisymme
 
 There may be no need to understand how the results are stored into the SQLite database. You can run the ``macro_force_from_capacitance.py`` to calculate the macroscopic capacitive force affecting the probe and print it to a normal text file. The `KPFM_simulation_tools <>`_ package contains a script for transferring the data from the FEM results database to the KPFM results database so that the KPFM simulation tools can read the electric potential at correct tip-sample distance and use it as an external potential in a CP2k calculation. If you need to see what the database file contains, use sqlite3 command line tool (requires basic knowledge of SQL language) or Sqliteman which has a GUI.
 
+Documentation
+-------------
+
+Here is the snapshot of created electrostatic model:
+
+.. image:: https://github.com/SINGROUP/KPFM_FEM/assets/13340693/5e12c196-e828-4b0e-904f-5549f662c56c
+  :width: 800
+  :alt: FEM electrostatic illustruation
+
+The original documentation and connection with `KPFM_sim <https://github.com/SINGROUP/KPFM_sim>`_ is in `here <https://github.com/SINGROUP/KPFM_sim/blob/master/docs/kpfm_sim_intro_slides.pdf>`_
+
+**Note:** The latest version of `KPFM_sim <https://github.com/SINGROUP/KPFM_sim>`_, which was done for a simulation of KPFM with flexible tip apexes and stepping out molecule, is not using KPFM_FEM at all and has a different kind of electrostatics models directly build-in.
+
 Author
 ------
 Juha Ritala (2016)
